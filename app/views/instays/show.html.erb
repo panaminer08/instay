@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @instay.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @instay.description %>
+</p>
+
+<%= link_to 'Edit', edit_instay_path(@instay) %> |
+<%= link_to 'Back', instays_path %>

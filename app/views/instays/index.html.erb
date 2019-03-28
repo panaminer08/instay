@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Instays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @instays.each do |instay| %>
+      <tr>
+        <td><%= instay.title %></td>
+        <td><%= instay.description %></td>
+        <td><%= link_to 'Show', instay %></td>
+        <td><%= link_to 'Edit', edit_instay_path(instay) %></td>
+        <td><%= link_to 'Destroy', instay, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Instay', new_instay_path %>
