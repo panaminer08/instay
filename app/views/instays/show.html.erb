@@ -5,7 +5,9 @@
   <%= @instay.title %>
 </p>
 
-<%= image_tag(@instay.thumbnail) %>
+<%= image_tag(@instay.thumbnail, style:"width: 400px; height:400px") %>
+
+<%= video_tag(url_for(@instay.clip), style:"width:400px; height:auto") %>
 
 <p>
   <strong>Description:</strong>
